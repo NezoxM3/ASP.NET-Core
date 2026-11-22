@@ -1,0 +1,29 @@
+﻿@page "/"
+@model IndexModel
+@{
+    ViewData["Title"] = "Про мене";
+}
+
+<section class="card profile">
+    <div class="avatar">@Model.Initials</div>
+
+    <h1>@Model.FirstName @Model.LastName</h1>
+    <p class="subtitle">Студент, який вивчає веброзробку</p>
+
+    <dl class="facts">
+        <div>
+            <dt>Ім'я та прізвище</dt>
+            <dd>@Model.FirstName @Model.LastName</dd>
+        </div>
+        <div>
+            <dt>Звідки</dt>
+            <dd>@Model.City, @Model.Country</dd>
+        </div>
+        <div>
+            <dt>Вік</dt>
+            <dd>@Model.Age років</dd>
+        </div>
+    </dl>
+
+    <a class="button" href="/message">Написати мені повідомлення</a>
+</section>

@@ -1,0 +1,56 @@
+@page "/message"
+@model MessageModel
+@{
+    ViewData["Title"] = "Повідомлення";
+}
+
+<section class="card">
+    <h1>Напишіть мені</h1>
+
+    <form method="post" novalidate>
+        <div class="field">
+            <label asp-for="Input.Name"></label>
+            <input asp-for="Input.Name" autocomplete="name">
+            <span class="err" asp-validation-for="Input.Name"></span>
+        </div>
+
+        <div class="field">
+            <label asp-for="Input.Email"></label>
+            <input asp-for="Input.Email" type="email" autocomplete="email">
+            <span class="err" asp-validation-for="Input.Email"></span>
+        </div>
+
+        <div class="field">
+            <label asp-for="Input.Text"></label>
+            <textarea asp-for="Input.Text" rows="5"></textarea>
+            <span class="err" asp-validation-for="Input.Text"></span>
+        </div>
+
+        <button class="button" type="submit">Відправити</button>
+    </form>
+</section>
+
+<section class="card">
+    <h2>Надіслані повідомлення (@Model.Messages.Count)</h2>
+
+    @if (Model.Messages.Count == 0)
+    {
+        <p class="muted">Поки що повідомлень немає.</p>
+    }
+    else
+    {
+        <ul class="messages">
+            @foreach (var m in Model.Messages)
+            {
+                <li class="message">
+                    <div class="message-head">
+                        <strong>@m.Name</strong>
+                        <span class="muted">@m.Email</span>
+                        <time class="muted">@m.SentAt.ToString("dd.MM.yyyy HH:mm")</time>
+                    </div>
+                    <p>@m.Text</p>
+                </li>
+            }
+        </ul>
+    }
+</section>
