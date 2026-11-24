@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "+tXzXH8E+vE=",
+  "success": true,
+  "projectFilePath": "/Users/mpyslar100gmail.com/Documents/MessagesApi/MessagesApi/MessagesApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/mpyslar100gmail.com/.nuget/packages/microsoft.aspnetcore.openapi/10.0.2/microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
+    "/Users/mpyslar100gmail.com/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "/Users/mpyslar100gmail.com/Documents/MessagesApi/MessagesApi/MessagesApi.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/mpyslar100gmail.com/Documents/MessagesApi/MessagesApi/MessagesApi.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:5000
+
+GET {{baseUrl}}/api/messages
+
+GET {{baseUrl}}/api/messages/1
+
+GET {{baseUrl}}/api/messages/999
+
+GET {{baseUrl}}/api/messages/by-sender?address=anna@example.com
+
+GET {{baseUrl}}/api/messages/by-sender?address=nobody@example.com
+
+GET {{baseUrl}}/api/messages/by-sender
+
+DELETE {{baseUrl}}/api/messages/2
+
+GET {{baseUrl}}/api/messages/2
+
+DELETE {{baseUrl}}/api/messages/2
+
+GET {{baseUrl}}/api/messages
